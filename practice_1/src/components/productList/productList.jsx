@@ -1,14 +1,15 @@
 import React from 'react'
 import { data as products } from '../../data/products'
-import Card from '../card/card'
 import './productList.css'
+import { ProductCard } from '../ProductCard'
+
 
 function ProductList() {
     return (
         <div className='productList'>
-            {products.map(product => (<Card key={product.id} product={product}>    </Card>))}
+            {products.map(product => (<ProductCard key={product.id} product={product}/>))}
         </div>
     )
 }
 
-export default ProductList
+export {ProductList}
