@@ -4,7 +4,7 @@ import CardList from './CardList/CardList';
 import './App.css'
 
 const App: FC = () => {
-  const { items, addItem, updateItem, toggleDone, removeItem, inputRef } = useList();
+  const { items, addItem, updateItem, toggleDone, removeItem } = useList();
 
   return (
     <div className='App'>
@@ -16,7 +16,6 @@ const App: FC = () => {
           updateItem={updateItem}
           toggleDone={toggleDone}
           removeItem={removeItem}
-          inputRef={inputRef}
         />
       </div>
     </div>

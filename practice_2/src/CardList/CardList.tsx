@@ -12,10 +12,9 @@ interface CardListProps {
     updateItem: (id: number, title: string) => void;
     toggleDone: (id: number) => void;
     removeItem: (id: number) => void;
-    inputRef: RefObject<HTMLInputElement>;
 }
 
-const CardList: FC<CardListProps> = ({ items, updateItem, toggleDone, removeItem, inputRef }) => {
+const CardList: FC<CardListProps> = ({ items, updateItem, toggleDone, removeItem }) => {
     return (
         <div>
             {items.map((item, index) => 
@@ -26,7 +25,6 @@ const CardList: FC<CardListProps> = ({ items, updateItem, toggleDone, removeItem
                     updateItem={updateItem}
                     toggleDone={toggleDone}
                     removeItem={removeItem}
-                    inputRef={inputRef}
                     index={index+1} 
                 />
             ))}

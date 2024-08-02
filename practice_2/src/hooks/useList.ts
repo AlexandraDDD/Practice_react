@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState,  } from 'react';
 
 interface Item {
   id: number;
@@ -8,13 +8,6 @@ interface Item {
 
 const useList = () => {
   const [items, setItems] = useState<Item[]>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [items]);
 
   const addItem = () => {
     const newItem: Item = { id: Date.now(), title: '', done: false };
@@ -39,7 +32,6 @@ const useList = () => {
     updateItem,
     toggleDone,
     removeItem,
-    inputRef
   };
 };
 
