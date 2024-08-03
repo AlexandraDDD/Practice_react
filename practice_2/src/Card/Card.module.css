@@ -1,0 +1,26 @@
+.CardCheckbox{
+    margin: 0 0 0 5px;
+    width: 22px; 
+    height: 22px; 
+}
+.Input{
+    padding: 8px 10px;
+  
+}
+.InputGroup{
+
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+h5{
+    margin: 0 8px 0 0;
+
+}
+.Remove{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
